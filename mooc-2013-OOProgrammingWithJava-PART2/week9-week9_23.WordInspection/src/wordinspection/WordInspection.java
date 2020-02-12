@@ -77,25 +77,17 @@ public class WordInspection {
         this.wordsContaining = new ArrayList();
         while (reader.hasNext()) {
             String vowelCheck = reader.next();
-            if (vowelCheck.contains("a")) {
-                if (vowelCheck.contains("e")) {
-                    if (vowelCheck.contains("i")) {
-                        if (vowelCheck.contains("o")) {
-                            if (vowelCheck.contains("u")) {
-                                if (vowelCheck.contains("y")) {
-                                    if (vowelCheck.contains("ä")) {
-                                        if (vowelCheck.contains("ö")) {
-                                            this.wordsContaining.add(vowelCheck);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return this.wordsContaining;
-    }
+            if (vowelCheck.contains("a") && vowelCheck.contains("e") 
+                    && vowelCheck.contains("i") && vowelCheck.contains("o")
+                    && vowelCheck.contains("u") && vowelCheck.contains("y")
+                    && vowelCheck.contains("ä") && vowelCheck.contains("ö")) 
 
+                this.wordsContaining.add(vowelCheck);
+
+        
+        
+    }
+        return this.wordsContaining;
+ }
 }
+
